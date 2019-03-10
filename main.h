@@ -1,10 +1,16 @@
 #include "mbed.h"
 #include "lib_crc.h"
+#include "ble/BLE.h"
+#include "ble/Gap.h"
+#include "Watchdog.h"
 #include "events/EventQueue.h"
 
 #define DEBUG 0
 
-static EventQueue ev_queue(10 * EVENTS_EVENT_SIZE);
+static EventQueue ev_queue(15 * EVENTS_EVENT_SIZE);
+
+const static char     DEVICE_NAME[] = "MODBUS_SENSOR";
+static const uint16_t uuid16_list[] = {};
 
 AnalogIn sensor(p2);
 RawSerial rs(p12, p14, 9600);
@@ -13,6 +19,7 @@ DigitalOut sendEn(p6, 0);
 
 const uint8_t address = 0x01;
 
+Watchdog wd;
 
 #define READ_DO         0x01
 #define READ_DI         0x02
@@ -43,6 +50,7 @@ bool newPacket = false, receiving = false, processingPacket = false, noError = t
 
 void blink() {
     nrfLED = !nrfLED;
+    wd.Service();
 }
 
 void initRegs(){
@@ -90,6 +98,7 @@ void waitForPacket(){
             indx = 0;
             newPacket = false;
             receiving = false;
+            wait_ms(500);
             ev_queue.call(processPacketAndRespond);
             return;
         }
@@ -409,11 +418,16 @@ void sendAnswer(){
     for(size_t i = 0;i < ansPacketLen;i++){
         rs.putc(ans[i]);
     }
+    wait_ms(10);
 }
 
 void processPacketAndRespond() {
     processingPacket = true;
-
+    if (DEBUG) {
+        for (size_t i = 0; i < packetLen; i++) {
+            rs.printf("%x ", buffer[i]);
+        }
+    }
     if(checkPacketCRC()){
         if (DEBUG) {
             rs.printf("CRC done\n");
@@ -457,4 +471,37 @@ void processPacketAndRespond() {
     sendAnswer();
     sendEn = 0;
     processingPacket = false;
+}
+
+void disconnectionCallback(const Gap::DisconnectionCallbackParams_t *params){
+    (void) params;
+    BLE::Instance().gap().startAdvertising();
+}
+
+void connectionCallback(const Gap::ConnectionCallbackParams_t *params) {
+    BLE::Instance().gap().stopAdvertising();
+}
+
+void bleInitComplete(BLE::InitializationCompleteCallbackContext *params){
+    BLE&        ble   = params->ble;
+    // ble_error_t error = params->error;
+
+    /* Ensure that it is the default instance of BLE */
+    if(ble.getInstanceID() != BLE::DEFAULT_INSTANCE) {
+        return;
+    }
+    ble.gap().onDisconnection(disconnectionCallback);
+    ble.gap().onConnection(connectionCallback);
+    /* setup advertising */
+    ble.gap().accumulateAdvertisingPayload(GapAdvertisingData::BREDR_NOT_SUPPORTED | GapAdvertisingData::LE_GENERAL_DISCOVERABLE);
+    ble.gap().accumulateAdvertisingPayload(GapAdvertisingData::COMPLETE_LIST_16BIT_SERVICE_IDS, (uint8_t *)uuid16_list, sizeof(uuid16_list));
+    ble.gap().accumulateAdvertisingPayload(GapAdvertisingData::COMPLETE_LOCAL_NAME, (uint8_t *)DEVICE_NAME, sizeof(DEVICE_NAME));
+    ble.gap().setAdvertisingType(GapAdvertisingParams::ADV_CONNECTABLE_UNDIRECTED);
+    ble.gap().setAdvertisingInterval(1000); /* 1s. */
+    ble.gap().startAdvertising();
+}
+
+void scheduleBleEventsProcessing(BLE::OnEventsToProcessCallbackContext* context) {
+    BLE &ble = BLE::Instance();
+    ev_queue.call(Callback<void()>(&ble, &BLE::processEvents));
 }

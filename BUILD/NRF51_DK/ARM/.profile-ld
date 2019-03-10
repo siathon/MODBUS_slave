@@ -35,7 +35,7 @@
         "DEVICE_SPI_ASYNCH=1", 
         "DEVICE_USTICKER=1", 
         "FEATURE_BLE=1", 
-        "MBED_BUILD_TIMESTAMP=1551961707.17", 
+        "MBED_BUILD_TIMESTAMP=1552216358.99", 
         "MBED_TICKLESS", 
         "NO_SYSTICK", 
         "NRF51", 
