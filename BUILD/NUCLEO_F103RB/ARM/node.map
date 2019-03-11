@@ -1,0 +1,689 @@
+Component: ARM Compiler 5.06 update 6 (build 750) Tool: armlink [4d35ed]
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x080000ed
+
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x000124c4, Max: 0x00020000, ABSOLUTE, COMPRESSED[0x00011b14])
+
+    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x00011ae0, Max: 0x00020000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08000000   0x000000ec   Data   RO        22784    RESET               BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/TARGET_NUCLEO_F103RB/device/TOOLCHAIN_ARM_STD/startup_stm32f103xb.o
+    0x080000ec   0x00000008   Code   RO        25279  * !!!main             C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(__main.o)
+    0x080000f4   0x00000034   Code   RO        26021    !!!scatter          C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(__scatter.o)
+    0x08000128   0x0000005a   Code   RO        26019    !!dczerorl2         C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(__dczerorl2.o)
+    0x08000182   0x00000002   PAD
+    0x08000184   0x0000001c   Code   RO        26023    !!handler_zi        C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(__scatter_zi.o)
+    0x080001a0   0x00000000   Code   RO        25154    .ARM.Collect$$_printf_percent$$00000000  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_percent.o)
+    0x080001a0   0x00000006   Code   RO        25571    .ARM.Collect$$_printf_percent$$00000001  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_n.o)
+    0x080001a6   0x00000006   Code   RO        25150    .ARM.Collect$$_printf_percent$$00000002  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_p.o)
+    0x080001ac   0x00000006   Code   RO        25153    .ARM.Collect$$_printf_percent$$00000003  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_f.o)
+    0x080001b2   0x00000006   Code   RO        25574    .ARM.Collect$$_printf_percent$$00000004  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_e.o)
+    0x080001b8   0x00000006   Code   RO        25575    .ARM.Collect$$_printf_percent$$00000005  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_g.o)
+    0x080001be   0x00000006   Code   RO        25576    .ARM.Collect$$_printf_percent$$00000006  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_a.o)
+    0x080001c4   0x0000000a   Code   RO        25581    .ARM.Collect$$_printf_percent$$00000007  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_ll.o)
+    0x080001ce   0x00000006   Code   RO        25573    .ARM.Collect$$_printf_percent$$00000008  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_i.o)
+    0x080001d4   0x00000006   Code   RO        25151    .ARM.Collect$$_printf_percent$$00000009  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_d.o)
+    0x080001da   0x00000006   Code   RO        25152    .ARM.Collect$$_printf_percent$$0000000A  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_u.o)
+    0x080001e0   0x00000006   Code   RO        25572    .ARM.Collect$$_printf_percent$$0000000B  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_o.o)
+    0x080001e6   0x00000006   Code   RO        25149    .ARM.Collect$$_printf_percent$$0000000C  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_x.o)
+    0x080001ec   0x00000006   Code   RO        25578    .ARM.Collect$$_printf_percent$$0000000D  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_lli.o)
+    0x080001f2   0x00000006   Code   RO        25579    .ARM.Collect$$_printf_percent$$0000000E  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_lld.o)
+    0x080001f8   0x00000006   Code   RO        25580    .ARM.Collect$$_printf_percent$$0000000F  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_llu.o)
+    0x080001fe   0x00000006   Code   RO        25585    .ARM.Collect$$_printf_percent$$00000010  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_llo.o)
+    0x08000204   0x00000006   Code   RO        25586    .ARM.Collect$$_printf_percent$$00000011  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_llx.o)
+    0x0800020a   0x0000000a   Code   RO        25582    .ARM.Collect$$_printf_percent$$00000012  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_l.o)
+    0x08000214   0x00000006   Code   RO        25570    .ARM.Collect$$_printf_percent$$00000013  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_c.o)
+    0x0800021a   0x00000006   Code   RO        25148    .ARM.Collect$$_printf_percent$$00000014  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_s.o)
+    0x08000220   0x00000006   Code   RO        25583    .ARM.Collect$$_printf_percent$$00000015  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_lc.o)
+    0x08000226   0x00000006   Code   RO        25584    .ARM.Collect$$_printf_percent$$00000016  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_ls.o)
+    0x0800022c   0x00000004   Code   RO        25577    .ARM.Collect$$_printf_percent$$00000017  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_percent_end.o)
+    0x08000230   0x00000002   Code   RO        25278    .ARM.Collect$$libinit$$00000000  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(libinit.o)
+    0x08000232   0x00000000   Code   RO        25647    .ARM.Collect$$libinit$$00000002  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(libinit2.o)
+    0x08000232   0x00000000   Code   RO        25649    .ARM.Collect$$libinit$$00000004  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(libinit2.o)
+    0x08000232   0x00000008   Code   RO        25650    .ARM.Collect$$libinit$$00000005  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(libinit2.o)
+    0x0800023a   0x00000000   Code   RO        25652    .ARM.Collect$$libinit$$0000000A  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(libinit2.o)
+    0x0800023a   0x00000000   Code   RO        25654    .ARM.Collect$$libinit$$0000000C  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(libinit2.o)
+    0x0800023a   0x00000000   Code   RO        25656    .ARM.Collect$$libinit$$0000000E  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(libinit2.o)
+    0x0800023a   0x00000006   Code   RO        25657    .ARM.Collect$$libinit$$0000000F  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(libinit2.o)
+    0x08000240   0x00000000   Code   RO        25659    .ARM.Collect$$libinit$$00000011  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(libinit2.o)
+    0x08000240   0x0000000c   Code   RO        25660    .ARM.Collect$$libinit$$00000012  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(libinit2.o)
+    0x0800024c   0x00000000   Code   RO        25661    .ARM.Collect$$libinit$$00000013  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(libinit2.o)
+    0x0800024c   0x00000000   Code   RO        25663    .ARM.Collect$$libinit$$00000015  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(libinit2.o)
+    0x0800024c   0x0000000a   Code   RO        25664    .ARM.Collect$$libinit$$00000016  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(libinit2.o)
+    0x08000256   0x00000000   Code   RO        25665    .ARM.Collect$$libinit$$00000017  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(libinit2.o)
+    0x08000256   0x00000000   Code   RO        25667    .ARM.Collect$$libinit$$00000019  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(libinit2.o)
+    0x08000256   0x00000000   Code   RO        25669    .ARM.Collect$$libinit$$0000001B  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(libinit2.o)
+    0x08000256   0x00000000   Code   RO        25671    .ARM.Collect$$libinit$$0000001D  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(libinit2.o)
+    0x08000256   0x00000000   Code   RO        25673    .ARM.Collect$$libinit$$0000001F  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(libinit2.o)
+    0x08000256   0x00000000   Code   RO        25675    .ARM.Collect$$libinit$$00000021  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(libinit2.o)
+    0x08000256   0x00000000   Code   RO        25677    .ARM.Collect$$libinit$$00000023  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(libinit2.o)
+    0x08000256   0x00000004   Code   RO        25678    .ARM.Collect$$libinit$$00000024  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(libinit2.o)
+    0x0800025a   0x00000000   Code   RO        25679    .ARM.Collect$$libinit$$00000025  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(libinit2.o)
+    0x0800025a   0x00000000   Code   RO        25683    .ARM.Collect$$libinit$$0000002C  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(libinit2.o)
+    0x0800025a   0x00000000   Code   RO        25685    .ARM.Collect$$libinit$$0000002E  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(libinit2.o)
+    0x0800025a   0x00000000   Code   RO        25687    .ARM.Collect$$libinit$$00000030  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(libinit2.o)
+    0x0800025a   0x00000004   Code   RO        25688    .ARM.Collect$$libinit$$00000031  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(libinit2.o)
+    0x0800025e   0x00000000   Code   RO        25689    .ARM.Collect$$libinit$$00000032  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(libinit2.o)
+    0x0800025e   0x00000002   Code   RO        25690    .ARM.Collect$$libinit$$00000033  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(libinit2.o)
+    0x08000260   0x00000000   Code   RO        25864    .ARM.Collect$$libshutdown$$00000004  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(libshutdown2.o)
+    0x08000260   0x00000000   Code   RO        25875    .ARM.Collect$$libshutdown$$0000000F  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(libshutdown2.o)
+    0x08000260   0x00000148   Code   RO        22093    .emb_text           BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_evflags.o
+    0x080003a8   0x00000148   Code   RO        22262    .emb_text           BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_mempool.o
+    0x080004f0   0x00000148   Code   RO        22314    .emb_text           BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_msgqueue.o
+    0x08000638   0x00000148   Code   RO        22434    .emb_text           BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_system.o
+    0x08000780   0x00000148   Code   RO        22448    .emb_text           BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_thread.o
+    0x080008c8   0x00000000   Code   RO        25750    .emb_text           C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(maybetermalloc2.o)
+    0x080008c8   0x000000c4   Code   RO          394    .text               BUILD/NUCLEO_F103RB/ARM/mbed-os/cmsis/TARGET_CORTEX_M/TOOLCHAIN_ARM/except.o
+    0x0800098c   0x00000094   Code   RO        22072    .text               BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/TOOLCHAIN_ARM/TARGET_M3/irq_cm3.o
+    0x08000a20   0x00000024   Code   RO        22785    .text               BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/TARGET_NUCLEO_F103RB/device/TOOLCHAIN_ARM_STD/startup_stm32f103xb.o
+    0x08000a44   0x00000010   Code   RO        24996    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(rt_ctype_table.o)
+    0x08000a54   0x00000004   Code   RO        25003    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(rt_errno_addr_twolibspace.o)
+    0x08000a58   0x0000009e   Code   RO        25015    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(h1_alloc_mt.o)
+    0x08000af6   0x00000076   Code   RO        25017    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(h1_free_mt.o)
+    0x08000b6c   0x000000ee   Code   RO        25069    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(lludivv7m.o)
+    0x08000c5a   0x00000026   Code   RO        25071    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(llshl.o)
+    0x08000c80   0x00000026   Code   RO        25073    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(llushr.o)
+    0x08000ca6   0x0000000a   Code   RO        25077    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(vfprintf.o)
+    0x08000cb0   0x00000034   Code   RO        25079    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(vsnprintf.o)
+    0x08000ce4   0x00000024   Code   RO        25083    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(c89vsprintf.o)
+    0x08000d08   0x00000034   Code   RO        25085    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(c89vsnprintf.o)
+    0x08000d3c   0x0000004e   Code   RO        25101    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_pad.o)
+    0x08000d8a   0x00000052   Code   RO        25103    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_str.o)
+    0x08000ddc   0x00000078   Code   RO        25105    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_dec.o)
+    0x08000e54   0x00000094   Code   RO        25125    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_hex_int_ll_ptr.o)
+    0x08000ee8   0x00000188   Code   RO        25145    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(__printf_flags_ss_wp.o)
+    0x08001070   0x000000f8   Code   RO        25187    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(fseek.o)
+    0x08001168   0x0000004c   Code   RO        25203    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(fclose.o)
+    0x080011b4   0x00000090   Code   RO        25213    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(fflush_locked.o)
+    0x08001244   0x00000144   Code   RO        25215    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(fopen_locked.o)
+    0x08001388   0x0000001c   Code   RO        25233    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(strspn.o)
+    0x080013a4   0x00000058   Code   RO        25237    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(memcmp.o)
+    0x080013fc   0x0000003e   Code   RO        25241    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(strlen.o)
+    0x0800143a   0x0000008a   Code   RO        25249    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(rt_memcpy_v6.o)
+    0x080014c4   0x00000064   Code   RO        25255    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(rt_memcpy_w.o)
+    0x08001528   0x00000044   Code   RO        25263    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(rt_memclr.o)
+    0x0800156c   0x0000004e   Code   RO        25265    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(rt_memclr_w.o)
+    0x080015ba   0x00000002   PAD
+    0x080015bc   0x00000080   Code   RO        25269    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(strcmpv7m.o)
+    0x0800163c   0x00000006   Code   RO        25276    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(heapauxi.o)
+    0x08001642   0x00000002   PAD
+    0x08001644   0x00000024   Code   RO        25284    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(init_aeabi.o)
+    0x08001668   0x00000022   Code   RO        25397    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\cpplib\cpprt_w.l(aeabi_vec_dtor_noexceptions.o)
+    0x0800168a   0x00000002   PAD
+    0x0800168c   0x00000008   Code   RO        25500    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(libspace.o)
+    0x08001694   0x0000000a   Code   RO        25512    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(rt_heap_descriptor_twolibspace.o)
+    0x0800169e   0x0000000a   Code   RO        25519    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(rt_locale_twolibspace.o)
+    0x080016a8   0x00000004   Code   RO        25521    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(hguard.o)
+    0x080016ac   0x0000008a   Code   RO        25523    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(init_alloc.o)
+    0x08001736   0x00000012   Code   RO        25529    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(h1_init_mt.o)
+    0x08001748   0x00000024   Code   RO        25541    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_truncate.o)
+    0x0800176c   0x000000b2   Code   RO        25543    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_intcommon.o)
+    0x0800181e   0x00000028   Code   RO        25545    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_charcount.o)
+    0x08001846   0x0000041e   Code   RO        25547    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_fp_dec.o)
+    0x08001c64   0x00000030   Code   RO        25549    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_char_common.o)
+    0x08001c94   0x0000000a   Code   RO        25551    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_sputc.o)
+    0x08001c9e   0x00000010   Code   RO        25553    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_snputc.o)
+    0x08001cae   0x0000002c   Code   RO        25555    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_char.o)
+    0x08001cda   0x00000002   PAD
+    0x08001cdc   0x000000bc   Code   RO        25559    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_wctomb.o)
+    0x08001d98   0x0000007c   Code   RO        25562    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_longlong_dec.o)
+    0x08001e14   0x00000070   Code   RO        25568    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_oct_int_ll.o)
+    0x08001e84   0x000001d6   Code   RO        25611    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(flsbuf.o)
+    0x0800205a   0x00000042   Code   RO        25613    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(ftell.o)
+    0x0800209c   0x000000f0   Code   RO        25617    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(stdio.o)
+    0x0800218c   0x00000068   Code   RO        25624    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(setvbuf_locked.o)
+    0x080021f4   0x000001c8   Code   RO        25626    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(initio_locked.o)
+    0x080023bc   0x0000000e   Code   RO        25739    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(sys_wrch.o)
+    0x080023ca   0x00000002   PAD
+    0x080023cc   0x0000000c   Code   RO        25741    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(sys_exit.o)
+    0x080023d8   0x0000003e   Code   RO        25753    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(h1_extend_mt.o)
+    0x08002416   0x0000008a   Code   RO        25755    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(lludiv10.o)
+    0x080024a0   0x000002fc   Code   RO        25759    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_fp_hex.o)
+    0x0800279c   0x00000080   Code   RO        25762    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_fp_infnan.o)
+    0x0800281c   0x00000040   Code   RO        25766    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_char_file_locked.o)
+    0x0800285c   0x0000002c   Code   RO        25768    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_wchar.o)
+    0x08002888   0x000000e4   Code   RO        25780    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(bigflt0.o)
+    0x0800296c   0x00000040   Code   RO        25833    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_wcrtomb.o)
+    0x080029ac   0x0000000a   Code   RO        25838    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(defsig_exit.o)
+    0x080029b6   0x0000000e   Code   RO        25844    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(defsig_rtred_outer.o)
+    0x080029c4   0x0000000e   Code   RO        25848    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(defsig_rtmem_outer.o)
+    0x080029d2   0x00000002   Code   RO        25907    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(use_no_semi.o)
+    0x080029d4   0x00000000   Code   RO        25909    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(indicate_semi.o)
+    0x080029d4   0x00000010   Code   RO        25917    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(term_alloc.o)
+    0x080029e4   0x00000032   Code   RO        25925    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(defsig_general.o)
+    0x08002a16   0x00000002   PAD
+    0x08002a18   0x00000034   Code   RO        25933    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(defsig_rtred_inner.o)
+    0x08002a4c   0x00000050   Code   RO        25935    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(defsig_rtmem_inner.o)
+    0x08002a9c   0x0000000a   Code   RO        25971    .text               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(h1_final_mt.o)
+    0x08002aa6   0x0000003e   Code   RO        25783    CL$$btod_d2e        C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(btod.o)
+    0x08002ae4   0x00000046   Code   RO        25785    CL$$btod_d2e_denorm_low  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(btod.o)
+    0x08002b2a   0x00000060   Code   RO        25784    CL$$btod_d2e_norm_op1  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(btod.o)
+    0x08002b8a   0x00000338   Code   RO        25793    CL$$btod_div_common  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(btod.o)
+    0x08002ec2   0x000000dc   Code   RO        25790    CL$$btod_e2e        C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(btod.o)
+    0x08002f9e   0x0000002a   Code   RO        25787    CL$$btod_ediv       C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(btod.o)
+    0x08002fc8   0x0000002a   Code   RO        25786    CL$$btod_emul       C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(btod.o)
+    0x08002ff2   0x00000244   Code   RO        25792    CL$$btod_mult_common  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(btod.o)
+    0x08003236   0x0000000c   Code   RO         2176    i.<Func3>           BUILD/NUCLEO_F103RB/ARM/mbed-os/drivers/SerialBase.o
+    0x08003242   0x00000002   PAD
+    0x08003244   0x00000054   Code   RO        22867    i.ADC_ConversionStop_Disable  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/device/stm32f1xx_hal_adc.o
+    0x08003298   0x000000b8   Code   RO        22871    i.ADC_Enable        BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/device/stm32f1xx_hal_adc.o
+    0x08003350   0x0000000c   Code   RO        24606    i.CAN1_SCE_IRQHandler  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/can_api.o
+    0x0800335c   0x00000002   Code   RO        22131    i.EvrRtxEventFlagsError  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_evr.o
+    0x0800335e   0x00000002   Code   RO        22132    i.EvrRtxKernelError  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_evr.o
+    0x08003360   0x00000002   Code   RO        22134    i.EvrRtxMessageQueueError  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_evr.o
+    0x08003362   0x00000002   Code   RO        22135    i.EvrRtxMutexError  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_evr.o
+    0x08003364   0x00000002   Code   RO        22137    i.EvrRtxThreadError  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_evr.o
+    0x08003366   0x00000002   PAD
+    0x08003368   0x0000001c   Code   RO        21987    i.EvrRtxThreadExit  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/mbed_rtx_handlers.o
+    0x08003384   0x0000011c   Code   RO        22927    i.HAL_ADCEx_Calibration_Start  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/device/stm32f1xx_hal_adc_ex.o
+    0x080034a0   0x00000130   Code   RO        22882    i.HAL_ADC_Init      BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/device/stm32f1xx_hal_adc.o
+    0x080035d0   0x00000002   Code   RO        22885    i.HAL_ADC_MspInit   BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/device/stm32f1xx_hal_adc.o
+    0x080035d2   0x00000002   PAD
+    0x080035d4   0x000000a8   Code   RO        23076    i.HAL_DMA_Abort_IT  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/device/stm32f1xx_hal_dma.o
+    0x0800367c   0x00000044   Code   RO        24702    i.HAL_GetTick       BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/hal_tick_overrides.o
+    0x080036c0   0x00000024   Code   RO        22830    i.HAL_Init          BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/device/stm32f1xx_hal.o
+    0x080036e4   0x0000000a   Code   RO        24703    i.HAL_InitTick      BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/hal_tick_overrides.o
+    0x080036ee   0x00000002   Code   RO        22833    i.HAL_MspInit       BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/device/stm32f1xx_hal.o
+    0x080036f0   0x00000024   Code   RO        23016    i.HAL_NVIC_SetPriorityGrouping  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/device/stm32f1xx_hal_cortex.o
+    0x08003714   0x00000020   Code   RO        23538    i.HAL_PWR_EnterSLEEPMode  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/device/stm32f1xx_hal_pwr.o
+    0x08003734   0x00000044   Code   RO        23540    i.HAL_PWR_EnterSTOPMode  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/device/stm32f1xx_hal_pwr.o
+    0x08003778   0x00000104   Code   RO        23603    i.HAL_RCCEx_GetPeriphCLKFreq  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/device/stm32f1xx_hal_rcc_ex.o
+    0x0800387c   0x0000012c   Code   RO        23604    i.HAL_RCCEx_PeriphCLKConfig  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/device/stm32f1xx_hal_rcc_ex.o
+    0x080039a8   0x000001d4   Code   RO        23569    i.HAL_RCC_ClockConfig  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/device/stm32f1xx_hal_rcc.o
+    0x08003b7c   0x00000040   Code   RO        23573    i.HAL_RCC_GetClockConfig  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/device/stm32f1xx_hal_rcc.o
+    0x08003bbc   0x000000a8   Code   RO        23575    i.HAL_RCC_GetOscConfig  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/device/stm32f1xx_hal_rcc.o
+    0x08003c64   0x00000020   Code   RO        23576    i.HAL_RCC_GetPCLK1Freq  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/device/stm32f1xx_hal_rcc.o
+    0x08003c84   0x00000020   Code   RO        23577    i.HAL_RCC_GetPCLK2Freq  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/device/stm32f1xx_hal_rcc.o
+    0x08003ca4   0x00000078   Code   RO        23578    i.HAL_RCC_GetSysClockFreq  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/device/stm32f1xx_hal_rcc.o
+    0x08003d1c   0x000003a0   Code   RO        23581    i.HAL_RCC_OscConfig  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/device/stm32f1xx_hal_rcc.o
+    0x080040bc   0x00000036   Code   RO        23913    i.HAL_TIM_Base_Init  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/device/stm32f1xx_hal_tim.o
+    0x080040f2   0x00000002   Code   RO        23915    i.HAL_TIM_Base_MspInit  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/device/stm32f1xx_hal_tim.o
+    0x080040f4   0x0000001a   Code   RO        23916    i.HAL_TIM_Base_Start  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/device/stm32f1xx_hal_tim.o
+    0x0800410e   0x00000036   Code   RO        23963    i.HAL_TIM_OC_Start  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/device/stm32f1xx_hal_tim.o
+    0x08004144   0x00000072   Code   RO        23966    i.HAL_TIM_OC_Stop   BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/device/stm32f1xx_hal_tim.o
+    0x080041b6   0x00000030   Code   RO        24534    i.HAL_UART_ErrorCallback  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/serial_device.o
+    0x080041e6   0x00000002   PAD
+    0x080041e8   0x000002b0   Code   RO        24209    i.HAL_UART_IRQHandler  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/device/stm32f1xx_hal_uart.o
+    0x08004498   0x00000062   Code   RO        24210    i.HAL_UART_Init     BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/device/stm32f1xx_hal_uart.o
+    0x080044fa   0x00000002   Code   RO        24212    i.HAL_UART_MspInit  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/device/stm32f1xx_hal_uart.o
+    0x080044fc   0x00000002   Code   RO        24216    i.HAL_UART_RxCpltCallback  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/device/stm32f1xx_hal_uart.o
+    0x080044fe   0x00000012   Code   RO        24535    i.HAL_UART_TxCpltCallback  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/serial_device.o
+    0x08004510   0x00000046   Code   RO        22315    i.MessageQueuePut   BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_msgqueue.o
+    0x08004556   0x00000008   Code   RO        22608    i.OS_Tick_AcknowledgeIRQ  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/Source/os_systick.o
+    0x0800455e   0x00000002   PAD
+    0x08004560   0x00000028   Code   RO        22610    i.OS_Tick_Enable    BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/Source/os_systick.o
+    0x08004588   0x00000006   Code   RO        22613    i.OS_Tick_GetIRQn   BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/Source/os_systick.o
+    0x0800458e   0x00000002   PAD
+    0x08004590   0x00000040   Code   RO        22616    i.OS_Tick_Setup     BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/Source/os_systick.o
+    0x080045d0   0x00000006   Code   RO        23543    i.PWR_OverloadWfe   BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/device/stm32f1xx_hal_pwr.o
+    0x080045d6   0x00000002   PAD
+    0x080045d8   0x000000a4   Code   RO        22790    i.SetSysClock       BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/TARGET_NUCLEO_F103RB/device/system_clock.o
+    0x0800467c   0x000000b4   Code   RO        24652    i.Set_GPIO_Clock    BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/gpio_api.o
+    0x08004730   0x00000070   Code   RO        24485    i.SystemCoreClockUpdate  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/device/system_stm32f1xx.o
+    0x080047a0   0x00000048   Code   RO        22793    i.SystemInit        BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/TARGET_NUCLEO_F103RB/device/system_clock.o
+    0x080047e8   0x00000078   Code   RO        23997    i.TIM_Base_SetConfig  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/device/stm32f1xx_hal_tim.o
+    0x08004860   0x00000010   Code   RO        24223    i.UART_DMAAbortOnError  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/device/stm32f1xx_hal_uart.o
+    0x08004870   0x000001b4   Code   RO        24233    i.UART_SetConfig    BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/device/stm32f1xx_hal_uart.o
+    0x08004a24   0x0000000c   Code   RO        24607    i.USB_HP_CAN1_TX_IRQHandler  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/can_api.o
+    0x08004a30   0x0000000c   Code   RO        24608    i.USB_LP_CAN1_RX0_IRQHandler  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/can_api.o
+    0x08004a3c   0x000000b8   Code   RO          291    i._Z12writeMultiAOv  BUILD/NUCLEO_F103RB/ARM/main.o
+    0x08004af4   0x000000d0   Code   RO          292    i._Z12writeMultiDOv  BUILD/NUCLEO_F103RB/ARM/main.o
+    0x08004bc4   0x000002bc   Code   RO          293    i._Z13processPacketv  BUILD/NUCLEO_F103RB/ARM/main.o
+    0x08004e80   0x000000bc   Code   RO          294    i._Z13waitForPacketv  BUILD/NUCLEO_F103RB/ARM/main.o
+    0x08004f3c   0x00000094   Code   RO          296    i._Z13writeSingleDOv  BUILD/NUCLEO_F103RB/ARM/main.o
+    0x08004fd0   0x00000044   Code   RO          298    i._Z15calculateAnsCRCv  BUILD/NUCLEO_F103RB/ARM/main.o
+    0x08005014   0x0000001a   Code   RO        22005    i._Z17default_idle_hookv  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/mbed_rtx_idle.o
+    0x0800502e   0x00000002   PAD
+    0x08005030   0x00000034   Code   RO           89    i._Z22calculate_crc16_ModbusPcj  BUILD/NUCLEO_F103RB/ARM/lib_crc/lib_crc.o
+    0x08005064   0x0000019c   Code   RO          300    i._Z23processPacketAndRespondv  BUILD/NUCLEO_F103RB/ARM/main.o
+    0x08005200   0x00000038   Code   RO          301    i._Z4rsRxv          BUILD/NUCLEO_F103RB/ARM/main.o
+    0x08005238   0x0000002c   Code   RO          302    i._Z5blinkv         BUILD/NUCLEO_F103RB/ARM/main.o
+    0x08005264   0x000000bc   Code   RO          303    i._Z6readAIv        BUILD/NUCLEO_F103RB/ARM/main.o
+    0x08005320   0x000000f4   Code   RO          305    i._Z6readDIv        BUILD/NUCLEO_F103RB/ARM/main.o
+    0x08005414   0x000000ec   Code   RO          306    i._Z6readDOv        BUILD/NUCLEO_F103RB/ARM/main.o
+    0x08005500   0x000000ac   Code   RO        21437    i._Z7get_fhci       BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_retarget.o
+    0x080055ac   0x00000010   Code   RO        20918    i._ZN10CThunkBase11cthunk_freeEPFvvE  BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/CThunkBase.o
+    0x080055bc   0x00000006   Code   RO        21676    i._ZN12DirectSerial4seekEli  BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_retarget.o
+    0x080055c2   0x00000006   Code   RO        21679    i._ZN12DirectSerial4sizeEv  BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_retarget.o
+    0x080055c8   0x00000004   Code   RO        21685    i._ZN12DirectSerial5closeEv  BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_retarget.o
+    0x080055cc   0x00000024   Code   RO        21439    i._ZN12DirectSerial5writeEPKvj  BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_retarget.o
+    0x080055f0   0x00000004   Code   RO        21682    i._ZN12DirectSerial6isattyEv  BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_retarget.o
+    0x080055f4   0x00000002   Code   RO        21670    i._ZN12DirectSerialD1Ev  BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_retarget.o
+    0x080055f6   0x00000004   Code   RO        21059    i._ZN4mbed10FileHandle4syncEv  BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/FileHandle.o
+    0x080055fa   0x00000006   Code   RO         2177    i._ZN4mbed10SerialBase10_base_getcEv  BUILD/NUCLEO_F103RB/ARM/mbed-os/drivers/SerialBase.o
+    0x08005600   0x0000000e   Code   RO         2178    i._ZN4mbed10SerialBase10_base_putcEi  BUILD/NUCLEO_F103RB/ARM/mbed-os/drivers/SerialBase.o
+    0x0800560e   0x00000014   Code   RO         2185    i._ZN4mbed10SerialBase12_irq_handlerEj9SerialIrq  BUILD/NUCLEO_F103RB/ARM/mbed-os/drivers/SerialBase.o
+    0x08005622   0x00000050   Code   RO         2189    i._ZN4mbed10SerialBase24interrupt_handler_asynchEv  BUILD/NUCLEO_F103RB/ARM/mbed-os/drivers/SerialBase.o
+    0x08005672   0x00000002   Code   RO         2191    i._ZN4mbed10SerialBase4lockEv  BUILD/NUCLEO_F103RB/ARM/mbed-os/drivers/SerialBase.o
+    0x08005674   0x000000bc   Code   RO         2196    i._ZN4mbed10SerialBase6attachENS_8CallbackIFvvEEENS0_7IrqTypeE  BUILD/NUCLEO_F103RB/ARM/mbed-os/drivers/SerialBase.o
+    0x08005730   0x00000002   Code   RO         2198    i._ZN4mbed10SerialBase6unlockEv  BUILD/NUCLEO_F103RB/ARM/mbed-os/drivers/SerialBase.o
+    0x08005732   0x00000002   PAD
+    0x08005734   0x000000e8   Code   RO         2202    i._ZN4mbed10SerialBaseC1E7PinNameS1_i  BUILD/NUCLEO_F103RB/ARM/mbed-os/drivers/SerialBase.o
+    0x0800581c   0x00000130   Code   RO         2204    i._ZN4mbed10SerialBaseD1Ev  BUILD/NUCLEO_F103RB/ARM/mbed-os/drivers/SerialBase.o
+    0x0800594c   0x00000004   Code   RO        21445    i._ZN4mbed21mbed_override_consoleEi  BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_retarget.o
+    0x08005950   0x00000004   Code   RO        21447    i._ZN4mbed28mbed_target_override_consoleEi  BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_retarget.o
+    0x08005954   0x00000002   Code   RO          365    i._ZN4mbed8AnalogInD1Ev  BUILD/NUCLEO_F103RB/ARM/main.o
+    0x08005956   0x00000004   Code   RO        21006    i._ZN4mbed8FileBase11getPathTypeEv  BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/FileBase.o
+    0x0800595a   0x00000002   PAD
+    0x0800595c   0x00000088   Code   RO        21009    i._ZN4mbed8FileBase6lookupEPKcj  BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/FileBase.o
+    0x080059e4   0x0000001e   Code   RO        21072    i._ZN4mbed8FilePath10fileSystemEv  BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/FilePath.o
+    0x08005a02   0x0000001c   Code   RO        21074    i._ZN4mbed8FilePath4fileEv  BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/FilePath.o
+    0x08005a1e   0x0000000a   Code   RO        21075    i._ZN4mbed8FilePath6existsEv  BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/FilePath.o
+    0x08005a28   0x00000018   Code   RO        21076    i._ZN4mbed8FilePath6isFileEv  BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/FilePath.o
+    0x08005a40   0x00000004   Code   RO        21077    i._ZN4mbed8FilePath8fileNameEv  BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/FilePath.o
+    0x08005a44   0x00000078   Code   RO        21078    i._ZN4mbed8FilePathC1EPKc  BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/FilePath.o
+    0x08005abc   0x00000020   Code   RO         1919    i._ZN4mbed9RawSerial4getcEv  BUILD/NUCLEO_F103RB/ARM/mbed-os/drivers/RawSerial.o
+    0x08005adc   0x00000002   Code   RO         1920    i._ZN4mbed9RawSerial4lockEv  BUILD/NUCLEO_F103RB/ARM/mbed-os/drivers/RawSerial.o
+    0x08005ade   0x00000024   Code   RO         1921    i._ZN4mbed9RawSerial4putcEi  BUILD/NUCLEO_F103RB/ARM/mbed-os/drivers/RawSerial.o
+    0x08005b02   0x00000002   PAD
+    0x08005b04   0x000000d6   Code   RO         1923    i._ZN4mbed9RawSerial6printfEPKcz  BUILD/NUCLEO_F103RB/ARM/mbed-os/drivers/RawSerial.o
+    0x08005bda   0x00000002   Code   RO         1924    i._ZN4mbed9RawSerial6unlockEv  BUILD/NUCLEO_F103RB/ARM/mbed-os/drivers/RawSerial.o
+    0x08005bdc   0x00000010   Code   RO         1925    i._ZN4mbed9RawSerialC1E7PinNameS1_i  BUILD/NUCLEO_F103RB/ARM/mbed-os/drivers/RawSerial.o
+    0x08005bec   0x00000004   Code   RO          368    i._ZN4mbed9RawSerialD1Ev  BUILD/NUCLEO_F103RB/ARM/main.o
+    0x08005bf0   0x0000004c   Code   RO        22638    i._ZN4rtos10ThisThread14flags_wait_allEjb  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/ThisThread.o
+    0x08005c3c   0x0000002c   Code   RO        22647    i._ZN4rtos10ThisThread9sleep_forEj  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/ThisThread.o
+    0x08005c68   0x00000088   Code   RO        21865    i._ZN4rtos5Mutex11constructorEPKc  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/Mutex.o
+    0x08005cf0   0x00000044   Code   RO        21869    i._ZN4rtos5Mutex4lockEv  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/Mutex.o
+    0x08005d34   0x0000003c   Code   RO        21870    i._ZN4rtos5Mutex6unlockEv  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/Mutex.o
+    0x08005d70   0x00000050   Code   RO        21874    i._ZN4rtos5MutexC1Ev  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/Mutex.o
+    0x08005dc0   0x00000004   Code   RO         2591    i._ZN6events10EventQueue8dispatchEi  BUILD/NUCLEO_F103RB/ARM/mbed-os/events/EventQueue.o
+    0x08005dc4   0x00000024   Code   RO         2593    i._ZN6events10EventQueueC1EjPh  BUILD/NUCLEO_F103RB/ARM/mbed-os/events/EventQueue.o
+    0x08005de8   0x0000001a   Code   RO         2594    i._ZN6events10EventQueueD1Ev  BUILD/NUCLEO_F103RB/ARM/mbed-os/events/EventQueue.o
+    0x08005e02   0x00000002   PAD
+    0x08005e04   0x0000002c   Code   RO            4    i._ZN8Watchdog10ConfiguredEf  BUILD/NUCLEO_F103RB/ARM/Watchdog/Watchdog.o
+    0x08005e30   0x00000010   Code   RO            6    i._ZN8Watchdog7ServiceEv  BUILD/NUCLEO_F103RB/ARM/Watchdog/Watchdog.o
+    0x08005e40   0x00000010   Code   RO            7    i._ZN8WatchdogC1Ev  BUILD/NUCLEO_F103RB/ARM/Watchdog/Watchdog.o
+    0x08005e50   0x00000004   Code   RO        21450    i._ZdaPv            BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_retarget.o
+    0x08005e54   0x00000044   Code   RO        21452    i._Znaj             BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_retarget.o
+    0x08005e98   0x0000000a   Code   RO         1101    i.__ARM_common_memcpy4_5  BUILD/NUCLEO_F103RB/ARM/mbed-os/components/wifi/esp8266-driver/ESP8266Interface.o
+    0x08005ea2   0x00000028   Code   RO        25899    i.__ARM_fpclassify  C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\m_ws.l(fpclassify.o)
+    0x08005eca   0x00000004   Code   RO        21456    i.__aeabi_atexit    BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_retarget.o
+    0x08005ece   0x00000024   Code   RO        25403    i.__aeabi_vec_ctor_nocookie_nodtor  C:\Keil_v5\ARM\ARMCC\bin\..\lib\cpplib\cpprt_w.l(aeabi_vec_ctor_nocookie_nodtor.o)
+    0x08005ef2   0x00000002   PAD
+    0x08005ef4   0x000000a8   Code   RO        21460    i.__cxa_guard_acquire  BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_retarget.o
+    0x08005f9c   0x000000a0   Code   RO        21461    i.__cxa_guard_release  BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_retarget.o
+    0x0800603c   0x00000054   Code   RO        21934    i.__rt_entry        BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/TOOLCHAIN_ARM_STD/mbed_boot_arm_std.o
+    0x08006090   0x00000034   Code   RO         1983    i.__sti___7_SPI_cpp_ab1f1164  BUILD/NUCLEO_F103RB/ARM/mbed-os/drivers/SPI.o
+    0x080060c4   0x0000016c   Code   RO          308    i.__sti___8_main_cpp_sensor  BUILD/NUCLEO_F103RB/ARM/main.o
+    0x08006230   0x00000068   Code   RO        21935    i.__user_perthread_libspace  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/TOOLCHAIN_ARM_STD/mbed_boot_arm_std.o
+    0x08006298   0x0000000e   Code   RO        25138    i._is_digit         C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(__printf_wp.o)
+    0x080062a6   0x00000002   PAD
+    0x080062a8   0x00000034   Code   RO        21936    i._mutex_acquire    BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/TOOLCHAIN_ARM_STD/mbed_boot_arm_std.o
+    0x080062dc   0x0000008c   Code   RO        21937    i._mutex_free       BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/TOOLCHAIN_ARM_STD/mbed_boot_arm_std.o
+    0x08006368   0x000000b8   Code   RO        21938    i._mutex_initialize  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/TOOLCHAIN_ARM_STD/mbed_boot_arm_std.o
+    0x08006420   0x0000002c   Code   RO        21939    i._mutex_release    BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/TOOLCHAIN_ARM_STD/mbed_boot_arm_std.o
+    0x0800644c   0x00000004   Code   RO        22223    i._platform_post_stackheap_init  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_lib.o
+    0x08006450   0x00000040   Code   RO        21464    i._sys_close        BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_retarget.o
+    0x08006490   0x00000030   Code   RO        21467    i._sys_flen         BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_retarget.o
+    0x080064c0   0x0000002e   Code   RO        21468    i._sys_istty        BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_retarget.o
+    0x080064ee   0x00000002   PAD
+    0x080064f0   0x00000098   Code   RO        21469    i._sys_open         BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_retarget.o
+    0x08006588   0x00000036   Code   RO        21471    i._sys_seek         BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_retarget.o
+    0x080065be   0x00000002   PAD
+    0x080065c0   0x00000068   Code   RO        21472    i._sys_write        BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_retarget.o
+    0x08006628   0x0000017c   Code   RO        22805    i.analogin_init     BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/analogin_device.o
+    0x080067a4   0x00000138   Code   RO        24614    i.can_irq           BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/can_api.o
+    0x080068dc   0x0000000c   Code   RO        21277    i.core_util_are_interrupts_enabled  BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_critical.o
+    0x080068e8   0x00000014   Code   RO        21283    i.core_util_atomic_decr_u16  BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_critical.o
+    0x080068fc   0x0000001a   Code   RO        21287    i.core_util_atomic_flag_test_and_set  BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_critical.o
+    0x08006916   0x00000014   Code   RO        21289    i.core_util_atomic_incr_u16  BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_critical.o
+    0x0800692a   0x00000002   PAD
+    0x0800692c   0x00000080   Code   RO        21292    i.core_util_critical_section_enter  BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_critical.o
+    0x080069ac   0x00000020   Code   RO        21293    i.core_util_critical_section_exit  BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_critical.o
+    0x080069cc   0x0000000c   Code   RO        21295    i.core_util_is_isr_active  BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_critical.o
+    0x080069d8   0x00000018   Code   RO        24883    i.debug             BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/serial_api.o
+    0x080069f0   0x0000008c   Code   RO         2617    i.equeue_alloc      BUILD/NUCLEO_F103RB/ARM/mbed-os/events/equeue/equeue.o
+    0x08006a7c   0x00000080   Code   RO         2627    i.equeue_create     BUILD/NUCLEO_F103RB/ARM/mbed-os/events/equeue/equeue.o
+    0x08006afc   0x00000060   Code   RO         2628    i.equeue_create_inplace  BUILD/NUCLEO_F103RB/ARM/mbed-os/events/equeue/equeue.o
+    0x08006b5c   0x0000005e   Code   RO         2630    i.equeue_destroy    BUILD/NUCLEO_F103RB/ARM/mbed-os/events/equeue/equeue.o
+    0x08006bba   0x00000002   PAD
+    0x08006bbc   0x0000025c   Code   RO         2631    i.equeue_dispatch   BUILD/NUCLEO_F103RB/ARM/mbed-os/events/equeue/equeue.o
+    0x08006e18   0x000000b8   Code   RO         2632    i.equeue_enqueue    BUILD/NUCLEO_F103RB/ARM/mbed-os/events/equeue/equeue.o
+    0x08006ed0   0x00000006   Code   RO         2633    i.equeue_event_delay  BUILD/NUCLEO_F103RB/ARM/mbed-os/events/equeue/equeue.o
+    0x08006ed6   0x00000006   Code   RO         2634    i.equeue_event_dtor  BUILD/NUCLEO_F103RB/ARM/mbed-os/events/equeue/equeue.o
+    0x08006edc   0x00000006   Code   RO         2635    i.equeue_event_period  BUILD/NUCLEO_F103RB/ARM/mbed-os/events/equeue/equeue.o
+    0x08006ee2   0x00000004   Code   RO         2663    i.equeue_mutex_create  BUILD/NUCLEO_F103RB/ARM/mbed-os/events/equeue/equeue_mbed.o
+    0x08006ee6   0x00000002   Code   RO         2664    i.equeue_mutex_destroy  BUILD/NUCLEO_F103RB/ARM/mbed-os/events/equeue/equeue_mbed.o
+    0x08006ee8   0x00000004   Code   RO         2665    i.equeue_mutex_lock  BUILD/NUCLEO_F103RB/ARM/mbed-os/events/equeue/equeue_mbed.o
+    0x08006eec   0x00000004   Code   RO         2666    i.equeue_mutex_unlock  BUILD/NUCLEO_F103RB/ARM/mbed-os/events/equeue/equeue_mbed.o
+    0x08006ef0   0x0000002e   Code   RO         2636    i.equeue_post       BUILD/NUCLEO_F103RB/ARM/mbed-os/events/equeue/equeue.o
+    0x08006f1e   0x0000002a   Code   RO         2667    i.equeue_sema_create  BUILD/NUCLEO_F103RB/ARM/mbed-os/events/equeue/equeue_mbed.o
+    0x08006f48   0x00000006   Code   RO         2668    i.equeue_sema_destroy  BUILD/NUCLEO_F103RB/ARM/mbed-os/events/equeue/equeue_mbed.o
+    0x08006f4e   0x00000008   Code   RO         2669    i.equeue_sema_signal  BUILD/NUCLEO_F103RB/ARM/mbed-os/events/equeue/equeue_mbed.o
+    0x08006f56   0x0000001e   Code   RO         2670    i.equeue_sema_wait  BUILD/NUCLEO_F103RB/ARM/mbed-os/events/equeue/equeue_mbed.o
+    0x08006f74   0x00000004   Code   RO         2671    i.equeue_tick       BUILD/NUCLEO_F103RB/ARM/mbed-os/events/equeue/equeue_mbed.o
+    0x08006f78   0x00000084   Code   RO        21322    i.error             BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_error.o
+    0x08006ffc   0x00000064   Code   RO        21476    i.exit              BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_retarget.o
+    0x08007060   0x0000001a   Code   RO        25180    i.fputc             C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(fputc.o)
+    0x0800707a   0x0000002e   Code   RO        24884    i.get_uart_index    BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/serial_api.o
+    0x080070a8   0x00000008   Code   RO        20823    i.get_us_ticker_data  BUILD/NUCLEO_F103RB/ARM/mbed-os/hal/mbed_us_ticker_api.o
+    0x080070b0   0x00000066   Code   RO        24663    i.gpio_dir          BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/gpio_api.o
+    0x08007116   0x00000002   PAD
+    0x08007118   0x00000054   Code   RO        24653    i.gpio_init         BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/gpio_api.o
+    0x0800716c   0x0000002e   Code   RO        20746    i.gpio_init_out     BUILD/NUCLEO_F103RB/ARM/mbed-os/hal/mbed_gpio.o
+    0x0800719a   0x0000003a   Code   RO        20747    i.gpio_init_out_ex  BUILD/NUCLEO_F103RB/ARM/mbed-os/hal/mbed_gpio.o
+    0x080071d4   0x00000008   Code   RO        24654    i.gpio_mode         BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/gpio_api.o
+    0x080071dc   0x00000020   Code   RO        20722    i.hal_critical_section_enter  BUILD/NUCLEO_F103RB/ARM/mbed-os/hal/mbed_critical_section_api.o
+    0x080071fc   0x00000078   Code   RO        20723    i.hal_critical_section_exit  BUILD/NUCLEO_F103RB/ARM/mbed-os/hal/mbed_critical_section_api.o
+    0x08007274   0x00000128   Code   RO        24915    i.hal_deepsleep     BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/sleep.o
+    0x0800739c   0x00000016   Code   RO        24916    i.hal_sleep         BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/sleep.o
+    0x080073b2   0x00000002   PAD
+    0x080073b4   0x000000c4   Code   RO        21323    i.handle_error      BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_error.o
+    0x08007478   0x000000b0   Code   RO        24964    i.init_16bit_timer  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/us_ticker.o
+    0x08007528   0x00000058   Code   RO        24885    i.init_uart         BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/serial_api.o
+    0x08007580   0x00000124   Code   RO        20790    i.initialize        BUILD/NUCLEO_F103RB/ARM/mbed-os/hal/mbed_ticker_api.o
+    0x080076a4   0x000000d0   Code   RO          309    i.main              BUILD/NUCLEO_F103RB/ARM/main.o
+    0x08007774   0x00000020   Code   RO        21255    i.mbed_assert_internal  BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_assert.o
+    0x08007794   0x00000060   Code   RO        21260    i.mbed_die          BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_board.o
+    0x080077f4   0x00000068   Code   RO        21325    i.mbed_error        BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_error.o
+    0x0800785c   0x00000004   Code   RO        21326    i.mbed_error_initialize  BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_error.o
+    0x08007860   0x00000054   Code   RO        21261    i.mbed_error_printf  BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_board.o
+    0x080078b4   0x00000020   Code   RO        21262    i.mbed_error_puts   BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_board.o
+    0x080078d4   0x0000004c   Code   RO        21264    i.mbed_error_vprintf  BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_board.o
+    0x08007920   0x00000110   Code   RO          399    i.mbed_fault_handler  BUILD/NUCLEO_F103RB/ARM/mbed-os/cmsis/TARGET_CORTEX_M/mbed_fault_handler.o
+    0x08007a30   0x00000024   Code   RO        21957    i.mbed_init         BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/mbed_boot.o
+    0x08007a54   0x00000002   Code   RO        21958    i.mbed_main         BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/mbed_boot.o
+    0x08007a56   0x00000004   Code   RO        21975    i.mbed_rtos_init    BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/mbed_rtos_rtx.o
+    0x08007a5a   0x00000002   PAD
+    0x08007a5c   0x000000d4   Code   RO        21976    i.mbed_rtos_start   BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/mbed_rtos_rtx.o
+    0x08007b30   0x00000020   Code   RO        24798    i.mbed_sdk_init     BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/mbed_overrides.o
+    0x08007b50   0x00000016   Code   RO        21960    i.mbed_start        BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/mbed_boot.o
+    0x08007b66   0x00000002   PAD
+    0x08007b68   0x00000018   Code   RO        21940    i.mbed_toolchain_init  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/TOOLCHAIN_ARM_STD/mbed_boot_arm_std.o
+    0x08007b80   0x00000014   Code   RO        21338    i.mbed_warning      BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_error.o
+    0x08007b94   0x00000118   Code   RO        21484    i.open              BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_retarget.o
+    0x08007cac   0x00000030   Code   RO        22078    i.osDelay           BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_delay.o
+    0x08007cdc   0x00000030   Code   RO        22095    i.osEventFlagsDelete  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_evflags.o
+    0x08007d0c   0x00000030   Code   RO        22098    i.osEventFlagsNew   BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_evflags.o
+    0x08007d3c   0x00000054   Code   RO        22099    i.osEventFlagsSet   BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_evflags.o
+    0x08007d90   0x00000090   Code   RO        22100    i.osEventFlagsWait  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_evflags.o
+    0x08007e20   0x00000034   Code   RO        22159    i.osKernelGetState  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_kernel.o
+    0x08007e54   0x00000028   Code   RO        22162    i.osKernelGetTickCount  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_kernel.o
+    0x08007e7c   0x00000034   Code   RO        22164    i.osKernelInitialize  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_kernel.o
+    0x08007eb0   0x00000030   Code   RO        22168    i.osKernelStart     BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_kernel.o
+    0x08007ee0   0x000000a8   Code   RO        22317    i.osMessageQueueGet  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_msgqueue.o
+    0x08007f88   0x00000030   Code   RO        22323    i.osMessageQueueNew  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_msgqueue.o
+    0x08007fb8   0x00000094   Code   RO        22324    i.osMessageQueuePut  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_msgqueue.o
+    0x0800804c   0x00000030   Code   RO        22367    i.osMutexAcquire    BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_mutex.o
+    0x0800807c   0x00000030   Code   RO        22368    i.osMutexDelete     BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_mutex.o
+    0x080080ac   0x00000030   Code   RO        22371    i.osMutexNew        BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_mutex.o
+    0x080080dc   0x00000030   Code   RO        22372    i.osMutexRelease    BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_mutex.o
+    0x0800810c   0x0000019c   Code   RO        21989    i.osRtxErrorNotify  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/mbed_rtx_handlers.o
+    0x080082a8   0x0000006a   Code   RO        22101    i.osRtxEventFlagsPostProcess  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_evflags.o
+    0x08008312   0x00000004   Code   RO        21990    i.osRtxIdleThread   BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/mbed_rtx_handlers.o
+    0x08008316   0x00000002   Code   RO        22224    i.osRtxKernelPreInit  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_lib.o
+    0x08008318   0x0000008a   Code   RO        22249    i.osRtxMemoryAlloc  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_memory.o
+    0x080083a2   0x00000046   Code   RO        22250    i.osRtxMemoryFree   BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_memory.o
+    0x080083e8   0x00000034   Code   RO        22251    i.osRtxMemoryInit   BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_memory.o
+    0x0800841c   0x0000001e   Code   RO        22272    i.osRtxMemoryPoolAlloc  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_mempool.o
+    0x0800843a   0x0000002a   Code   RO        22273    i.osRtxMemoryPoolFree  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_mempool.o
+    0x08008464   0x00000060   Code   RO        22274    i.osRtxMemoryPoolInit  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_mempool.o
+    0x080084c4   0x000000e8   Code   RO        22326    i.osRtxMessageQueuePostProcess  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_msgqueue.o
+    0x080085ac   0x00000048   Code   RO        22373    i.osRtxMutexOwnerRelease  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_mutex.o
+    0x080085f4   0x00000060   Code   RO        22435    i.osRtxPendSV_Handler  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_system.o
+    0x08008654   0x00000054   Code   RO        22436    i.osRtxPostProcess  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_system.o
+    0x080086a8   0x00000080   Code   RO        22449    i.osRtxThreadDelayRemove  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_thread.o
+    0x08008728   0x00000078   Code   RO        22450    i.osRtxThreadDelayTick  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_thread.o
+    0x080087a0   0x000000f0   Code   RO        22451    i.osRtxThreadDispatch  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_thread.o
+    0x08008890   0x00000058   Code   RO        22452    i.osRtxThreadFree   BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_thread.o
+    0x080088e8   0x0000001c   Code   RO        22453    i.osRtxThreadListGet  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_thread.o
+    0x08008904   0x00000028   Code   RO        22454    i.osRtxThreadListPut  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_thread.o
+    0x0800892c   0x0000001c   Code   RO        22455    i.osRtxThreadListRemove  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_thread.o
+    0x08008948   0x00000050   Code   RO        22456    i.osRtxThreadListSort  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_thread.o
+    0x08008998   0x0000005c   Code   RO        22457    i.osRtxThreadPostProcess  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_thread.o
+    0x080089f4   0x00000034   Code   RO        22458    i.osRtxThreadReadyPut  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_thread.o
+    0x08008a28   0x00000006   Code   RO        22459    i.osRtxThreadRegPtr  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_thread.o
+    0x08008a2e   0x00000002   PAD
+    0x08008a30   0x0000002c   Code   RO        22460    i.osRtxThreadStackCheck  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_thread.o
+    0x08008a5c   0x0000004c   Code   RO        22461    i.osRtxThreadStartup  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_thread.o
+    0x08008aa8   0x00000014   Code   RO        22462    i.osRtxThreadSwitch  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_thread.o
+    0x08008abc   0x000000ac   Code   RO        22463    i.osRtxThreadWaitEnter  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_thread.o
+    0x08008b68   0x00000050   Code   RO        22464    i.osRtxThreadWaitExit  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_thread.o
+    0x08008bb8   0x00000080   Code   RO        22437    i.osRtxTick_Handler  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_system.o
+    0x08008c38   0x00000048   Code   RO        22573    i.osRtxTimerThread  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_timer.o
+    0x08008c80   0x0000008c   Code   RO        22574    i.osRtxTimerTick    BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_timer.o
+    0x08008d0c   0x0000001c   Code   RO        22467    i.osThreadExit      BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_thread.o
+    0x08008d28   0x00000030   Code   RO        22471    i.osThreadFlagsWait  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_thread.o
+    0x08008d58   0x00000028   Code   RO        22473    i.osThreadGetId     BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_thread.o
+    0x08008d80   0x00000030   Code   RO        22480    i.osThreadNew       BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_thread.o
+    0x08008db0   0x00000288   Code   RO        24807    i.pin_function      BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/pinmap.o
+    0x08009038   0x0000013c   Code   RO        24808    i.pin_mode          BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/pinmap.o
+    0x08009174   0x0000006c   Code   RO        20773    i.pinmap_function   BUILD/NUCLEO_F103RB/ARM/mbed-os/hal/mbed_pinmap_common.o
+    0x080091e0   0x00000044   Code   RO        20774    i.pinmap_merge      BUILD/NUCLEO_F103RB/ARM/mbed-os/hal/mbed_pinmap_common.o
+    0x08009224   0x0000006c   Code   RO        20775    i.pinmap_peripheral  BUILD/NUCLEO_F103RB/ARM/mbed-os/hal/mbed_pinmap_common.o
+    0x08009290   0x00000068   Code   RO        20776    i.pinmap_pinout     BUILD/NUCLEO_F103RB/ARM/mbed-os/hal/mbed_pinmap_common.o
+    0x080092f8   0x000001ac   Code   RO          401    i.print_context_info  BUILD/NUCLEO_F103RB/ARM/mbed-os/cmsis/TARGET_CORTEX_M/mbed_fault_handler.o
+    0x080094a4   0x00000210   Code   RO        21339    i.print_error_report  BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_error.o
+    0x080096b4   0x00000024   Code   RO        24965    i.restore_timer_ctx  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/us_ticker.o
+    0x080096d8   0x0000000c   Code   RO        22007    i.rtos_idle_loop    BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/mbed_rtx_idle.o
+    0x080096e4   0x00000024   Code   RO        24966    i.save_timer_ctx    BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/us_ticker.o
+    0x08009708   0x00000170   Code   RO        20791    i.schedule_interrupt  BUILD/NUCLEO_F103RB/ARM/mbed-os/hal/mbed_ticker_api.o
+    0x08009878   0x00000048   Code   RO        24886    i.serial_baud       BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/serial_api.o
+    0x080098c0   0x0000002c   Code   RO        24538    i.serial_getc       BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/serial_device.o
+    0x080098ec   0x000001f8   Code   RO        24890    i.serial_init       BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/serial_api.o
+    0x08009ae4   0x00000018   Code   RO        24539    i.serial_irq_handler  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/serial_device.o
+    0x08009afc   0x0000015c   Code   RO        24540    i.serial_irq_handler_asynch  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/serial_device.o
+    0x08009c58   0x000000f8   Code   RO        24541    i.serial_irq_set    BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/serial_device.o
+    0x08009d50   0x00000064   Code   RO        24891    i.serial_is_tx_ongoing  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/serial_api.o
+    0x08009db4   0x00000034   Code   RO        24542    i.serial_putc       BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/serial_device.o
+    0x08009de8   0x00000028   Code   RO        24893    i.serial_readable   BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/serial_api.o
+    0x08009e10   0x00000018   Code   RO        24894    i.serial_writable   BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/serial_api.o
+    0x08009e28   0x00000068   Code   RO        21748    i.sleep_manager_lock_deep_sleep_internal  BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_sleep_manager.o
+    0x08009e90   0x00000024   Code   RO        21749    i.sleep_manager_sleep_auto  BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_sleep_manager.o
+    0x08009eb4   0x00000058   Code   RO        21750    i.sleep_manager_unlock_deep_sleep_internal  BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_sleep_manager.o
+    0x08009f0c   0x000000f8   Code   RO        24809    i.stm_pin_PullConfig  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/pinmap.o
+    0x0800a004   0x00000010   Code   RO        22080    i.svcRtxDelay       BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_delay.o
+    0x0800a014   0x00000068   Code   RO        22103    i.svcRtxEventFlagsDelete  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_evflags.o
+    0x0800a07c   0x00000080   Code   RO        22106    i.svcRtxEventFlagsNew  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_evflags.o
+    0x0800a0fc   0x000000a8   Code   RO        22107    i.svcRtxEventFlagsSet  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_evflags.o
+    0x0800a1a4   0x000000b8   Code   RO        22108    i.svcRtxEventFlagsWait  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_evflags.o
+    0x0800a25c   0x0000000c   Code   RO        22173    i.svcRtxKernelGetState  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_kernel.o
+    0x0800a268   0x0000000c   Code   RO        22176    i.svcRtxKernelGetTickCount  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_kernel.o
+    0x0800a274   0x00000188   Code   RO        22178    i.svcRtxKernelInitialize  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_kernel.o
+    0x0800a3fc   0x000000b0   Code   RO        22182    i.svcRtxKernelStart  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_kernel.o
+    0x0800a4ac   0x0000011c   Code   RO        22328    i.svcRtxMessageQueueGet  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_msgqueue.o
+    0x0800a5c8   0x0000014c   Code   RO        22334    i.svcRtxMessageQueueNew  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_msgqueue.o
+    0x0800a714   0x000000c8   Code   RO        22335    i.svcRtxMessageQueuePut  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_msgqueue.o
+    0x0800a7dc   0x000000c4   Code   RO        22374    i.svcRtxMutexAcquire  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_mutex.o
+    0x0800a8a0   0x000000c0   Code   RO        22375    i.svcRtxMutexDelete  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_mutex.o
+    0x0800a960   0x00000084   Code   RO        22378    i.svcRtxMutexNew    BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_mutex.o
+    0x0800a9e4   0x000000dc   Code   RO        22379    i.svcRtxMutexRelease  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_mutex.o
+    0x0800aac0   0x00000088   Code   RO        22488    i.svcRtxThreadExit  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_thread.o
+    0x0800ab48   0x000000a4   Code   RO        22492    i.svcRtxThreadFlagsWait  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_thread.o
+    0x0800abec   0x0000000c   Code   RO        22494    i.svcRtxThreadGetId  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_thread.o
+    0x0800abf8   0x00000220   Code   RO        22501    i.svcRtxThreadNew   BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_thread.o
+    0x0800ae18   0x00000072   Code   RO        20795    i.ticker_irq_handler  BUILD/NUCLEO_F103RB/ARM/mbed-os/hal/mbed_ticker_api.o
+    0x0800ae8a   0x0000001e   Code   RO        20796    i.ticker_read       BUILD/NUCLEO_F103RB/ARM/mbed-os/hal/mbed_ticker_api.o
+    0x0800aea8   0x00000024   Code   RO        20797    i.ticker_read_us    BUILD/NUCLEO_F103RB/ARM/mbed-os/hal/mbed_ticker_api.o
+    0x0800aecc   0x00000028   Code   RO        24967    i.timer_irq_handler  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/us_ticker.o
+    0x0800aef4   0x0000000c   Code   RO        24550    i.uart1_irq         BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/serial_device.o
+    0x0800af00   0x0000000c   Code   RO        24551    i.uart2_irq         BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/serial_device.o
+    0x0800af0c   0x0000000c   Code   RO        24552    i.uart3_irq         BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/serial_device.o
+    0x0800af18   0x00000074   Code   RO        24553    i.uart_irq          BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/serial_device.o
+    0x0800af8c   0x0000010c   Code   RO        20802    i.update_present_time  BUILD/NUCLEO_F103RB/ARM/mbed-os/hal/mbed_ticker_api.o
+    0x0800b098   0x00000010   Code   RO        24968    i.us_ticker_clear_interrupt  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/us_ticker.o
+    0x0800b0a8   0x00000014   Code   RO        24969    i.us_ticker_disable_interrupt  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/us_ticker.o
+    0x0800b0bc   0x00000024   Code   RO        24970    i.us_ticker_fire_interrupt  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/us_ticker.o
+    0x0800b0e0   0x0000001c   Code   RO        24971    i.us_ticker_free    BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/us_ticker.o
+    0x0800b0fc   0x00000008   Code   RO        24972    i.us_ticker_get_info  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/us_ticker.o
+    0x0800b104   0x00000018   Code   RO        24973    i.us_ticker_init    BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/us_ticker.o
+    0x0800b11c   0x00000018   Code   RO        20825    i.us_ticker_irq_handler  BUILD/NUCLEO_F103RB/ARM/mbed-os/hal/mbed_us_ticker_api.o
+    0x0800b134   0x0000000c   Code   RO        24974    i.us_ticker_read    BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/us_ticker.o
+    0x0800b140   0x00000020   Code   RO        24975    i.us_ticker_set_interrupt  BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/us_ticker.o
+    0x0800b160   0x0000005c   Code   RO        21784    i.wait_ms           BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_wait_api_rtos.o
+    0x0800b1bc   0x0000007c   Code   RO        21785    i.wait_us           BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_wait_api_rtos.o
+    0x0800b238   0x00000038   Code   RO        21499    i.write             BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_retarget.o
+    0x0800b270   0x0000002c   Code   RO        25629    locale$$code        C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(lc_ctype_c.o)
+    0x0800b29c   0x0000002c   Code   RO        25836    locale$$code        C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(lc_numeric_c.o)
+    0x0800b2c8   0x0000001a   Code   RO         2052    t._ZN4mbed11TransactionINS_3SPIEEC1Ev  BUILD/NUCLEO_F103RB/ARM/mbed-os/drivers/SPI.o
+    0x0800b2e2   0x00000016   Code   RO         2058    t._ZN4mbed11TransactionINS_3SPIEED1Ev  BUILD/NUCLEO_F103RB/ARM/mbed-os/drivers/SPI.o
+    0x0800b2f8   0x00000018   Code   RO         2055    t._ZN4mbed14CircularBufferINS_11TransactionINS_3SPIEEELj2EjED1Ev  BUILD/NUCLEO_F103RB/ARM/mbed-os/drivers/SPI.o
+    0x0800b310   0x00000004   Code   RO          376    t._ZN4mbed8CallbackIFvvEE13function_callIPS1_EEvPKv  BUILD/NUCLEO_F103RB/ARM/main.o
+    0x0800b314   0x00000002   Code   RO          382    t._ZN4mbed8CallbackIFvvEE13function_dtorIPS1_EEvPv  BUILD/NUCLEO_F103RB/ARM/main.o
+    0x0800b316   0x0000000a   Code   RO          379    t._ZN4mbed8CallbackIFvvEE13function_moveIPS1_EEvPvPKv  BUILD/NUCLEO_F103RB/ARM/main.o
+    0x0800b320   0x00000012   Code   RO         1533    t._ZN4mbed8CallbackIFvvEED1Ev  BUILD/NUCLEO_F103RB/ARM/mbed-os/drivers/CAN.o
+    0x0800b332   0x00000030   Code   RO         2279    t._ZN6CThunkIN4mbed10SerialBaseEE10trampolineEP10CThunkBase  BUILD/NUCLEO_F103RB/ARM/mbed-os/drivers/SerialBase.o
+    0x0800b362   0x00000004   Code   RO          359    t._ZN6events10EventQueue13function_callIPFvvEEEvPv  BUILD/NUCLEO_F103RB/ARM/main.o
+    0x0800b366   0x00000002   Code   RO          362    t._ZN6events10EventQueue13function_dtorIPFvvEEEvPv  BUILD/NUCLEO_F103RB/ARM/main.o
+    0x0800b368   0x00000054   Code   RO         1592    t._ZNK12SingletonPtrIN4rtos5MutexEEptEv  BUILD/NUCLEO_F103RB/ARM/mbed-os/drivers/FlashIAP.o
+    0x0800b3bc   0x0000003e   Code   RO        25454    x$fpl$ffixu         C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\fz_ws.l(ffixu.o)
+    0x0800b3fa   0x0000008c   Code   RO        25726    x$fpl$fnaninf       C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\fz_ws.l(fnaninf.o)
+    0x0800b486   0x00000004   Code   RO        25476    x$fpl$printf1       C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\fz_ws.l(printf1.o)
+    0x0800b48a   0x00000004   Code   RO        25730    x$fpl$printf2       C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\fz_ws.l(printf2.o)
+    0x0800b48e   0x00000000   Code   RO        25738    x$fpl$usenofp       C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\fz_ws.l(usenofp.o)
+    0x0800b48e   0x00000002   PAD
+    0x0800b490   0x00005e00   Data   RO          197    .constdata          BUILD/NUCLEO_F103RB/ARM/lib_crc/lib_crc.o
+    0x08011290   0x00000004   Data   RO          403    .constdata          BUILD/NUCLEO_F103RB/ARM/mbed-os/cmsis/TARGET_CORTEX_M/mbed_fault_handler.o
+    0x08011294   0x00000010   Data   RO         2234    .constdata          BUILD/NUCLEO_F103RB/ARM/mbed-os/drivers/SerialBase.o
+    0x080112a4   0x00000020   Data   RO        20827    .constdata          BUILD/NUCLEO_F103RB/ARM/mbed-os/hal/mbed_us_ticker_api.o
+    0x080112c4   0x00000008   Data   RO        20828    .constdata          BUILD/NUCLEO_F103RB/ARM/mbed-os/hal/mbed_us_ticker_api.o
+    0x080112cc   0x00000005   Data   RO        21265    .constdata          BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_board.o
+    0x080112d1   0x00000003   PAD
+    0x080112d4   0x00000028   Data   RO        21565    .constdata          BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_retarget.o
+    0x080112fc   0x00000024   Data   RO        22232    .constdata          BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_lib.o
+    0x08011320   0x00000024   Data   RO        22233    .constdata          BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_lib.o
+    0x08011344   0x00000018   Data   RO        22234    .constdata          BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_lib.o
+    0x0801135c   0x00000004   Data   RO        22235    .constdata          BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_lib.o
+    0x08011360   0x000000b4   Data   RO        22766    .constdata          BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/TARGET_NUCLEO_F103RB/PeripheralPins.o
+    0x08011414   0x00000024   Data   RO        22767    .constdata          BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/TARGET_NUCLEO_F103RB/PeripheralPins.o
+    0x08011438   0x00000048   Data   RO        22771    .constdata          BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/TARGET_NUCLEO_F103RB/PeripheralPins.o
+    0x08011480   0x00000048   Data   RO        22772    .constdata          BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/TARGET_NUCLEO_F103RB/PeripheralPins.o
+    0x080114c8   0x00000010   Data   RO        24486    .constdata          BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/device/system_stm32f1xx.o
+    0x080114d8   0x00000008   Data   RO        24487    .constdata          BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/device/system_stm32f1xx.o
+    0x080114e0   0x00000040   Data   RO        24810    .constdata          BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/pinmap.o
+    0x08011520   0x00000008   Data   RO        24977    .constdata          BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/us_ticker.o
+    0x08011528   0x00000028   Data   RO        25126    .constdata          C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_hex_int_ll_ptr.o)
+    0x08011550   0x00000011   Data   RO        25146    .constdata          C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(__printf_flags_ss_wp.o)
+    0x08011561   0x00000003   PAD
+    0x08011564   0x00000008   Data   RO        25560    .constdata          C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_wctomb.o)
+    0x0801156c   0x00000026   Data   RO        25760    .constdata          C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(_printf_fp_hex.o)
+    0x08011592   0x00000002   PAD
+    0x08011594   0x00000094   Data   RO        25781    .constdata          C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(bigflt0.o)
+    0x08011628   0x00000050   Data   RO        21667    .constdata__ZTV12DirectSerial  BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_retarget.o
+    0x08011678   0x00000018   Data   RO         2278    .constdata__ZTVN4mbed10SerialBaseE  BUILD/NUCLEO_F103RB/ARM/mbed-os/drivers/SerialBase.o
+    0x08011690   0x00000018   Data   RO          372    .constdata__ZTVN4mbed8AnalogInE  BUILD/NUCLEO_F103RB/ARM/main.o
+    0x080116a8   0x00000018   Data   RO         1948    .constdata__ZTVN4mbed9RawSerialE  BUILD/NUCLEO_F103RB/ARM/mbed-os/drivers/RawSerial.o
+    0x080116c0   0x0000000c   Data   RO          373    .constdata__ZZN4mbed8CallbackIFvvEE8generateIPS1_EEvRKT_E3ops  BUILD/NUCLEO_F103RB/ARM/main.o
+    0x080116cc   0x00000014   Data   RO          357    .constdata__ZZNK12SingletonPtrIN4rtos5MutexEE3getEvEs  BUILD/NUCLEO_F103RB/ARM/main.o
+    0x080116e0   0x00000022   Data   RO          358    .constdata__ZZNK12SingletonPtrIN4rtos5MutexEE3getEvEs_0  BUILD/NUCLEO_F103RB/ARM/main.o
+    0x08011702   0x00000002   PAD
+    0x08011704   0x00000095   Data   RO          404    .conststring        BUILD/NUCLEO_F103RB/ARM/mbed-os/cmsis/TARGET_CORTEX_M/mbed_fault_handler.o
+    0x08011799   0x00000003   PAD
+    0x0801179c   0x000000f4   Data   RO        21341    .conststring        BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_error.o
+    0x08011890   0x00000009   Data   RO        22236    .conststring        BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_lib.o
+    0x08011899   0x00000003   PAD
+    0x0801189c   0x0000000a   Data   RO        22237    .conststring        BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_lib.o
+    0x080118a6   0x00000002   PAD
+    0x080118a8   0x00000070   Data   RO        22660    .conststring        BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/ThisThread.o
+    0x08011918   0x0000000b   Data   RO        22185    .conststrlit        BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_kernel.o
+    0x08011923   0x00000001   PAD
+    0x08011924   0x00000068   Data   RO        22239    .rodata             BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_lib.o
+    0x0801198c   0x00000020   Data   RO        26018    Region$$Table       anon$$obj.o
+    0x080119ac   0x00000110   Data   RO        25628    locale$$data        C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(lc_ctype_c.o)
+    0x08011abc   0x0000001c   Data   RO        25835    locale$$data        C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(lc_numeric_c.o)
+    0x08011ad8   0x00000004   Data   RO          332    .init_array         BUILD/NUCLEO_F103RB/ARM/main.o
+    0x08011adc   0x00000004   Data   RO         2012    .init_array         BUILD/NUCLEO_F103RB/ARM/mbed-os/drivers/SPI.o
+    0x08011ae0   0x00000000   Data   RO        25282    .init_array         C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(init_aeabi.o)
+
+
+    Execution Region RW_IRAM1 (Base: 0x200000f0, Size: 0x00002714, Max: 0x00004f10, ABSOLUTE, COMPRESSED[0x00000034])
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x200000f0   0x00000040   Data   RW        22225    .bss.os             BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_lib.o
+    0x20000130   0x000001f0   Data   RW        21942    .bss.os.libspace    BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/TOOLCHAIN_ARM_STD/mbed_boot_arm_std.o
+    0x20000320   0x00000034   Data   RW        22226    .bss.os.msgqueue.cb  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_lib.o
+    0x20000354   0x00000050   Data   RW        22227    .bss.os.msgqueue.mem  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_lib.o
+    0x200003a4   0x00000044   Data   RW        22228    .bss.os.thread.cb   BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_lib.o
+    0x200003e8   0x00000044   Data   RW        22229    .bss.os.thread.cb   BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_lib.o
+    0x2000042c   0x00000004   PAD
+    0x20000430   0x00000200   Data   RW        22230    .bss.os.thread.stack  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_lib.o
+    0x20000630   0x00000300   Data   RW        22231    .bss.os.thread.stack  BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_lib.o
+    0x20000930   0x00000018   Data   RW          331    .data               BUILD/NUCLEO_F103RB/ARM/main.o
+    0x20000948   0x00000002   Data   RW        20725    .data               BUILD/NUCLEO_F103RB/ARM/mbed-os/hal/mbed_critical_section_api.o
+    0x2000094a   0x00000002   PAD
+    0x2000094c   0x00000004   Data   RW        20829    .data               BUILD/NUCLEO_F103RB/ARM/mbed-os/hal/mbed_us_ticker_api.o
+    0x20000950   0x00000004   Data   RW        20927    .data               BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/CThunkBase.o
+    0x20000954   0x00000008   Data   RW        21023    .data               BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/FileBase.o
+    0x2000095c   0x00000004   Data   RW        21296    .data               BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_critical.o
+    0x20000960   0x0000000c   Data   RW        21342    .data               BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_error.o
+    0x2000096c   0x00000004   Data   RW        21566    .data               BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_retarget.o
+    0x20000970   0x00000004   Data   RW        21567    .data               BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_retarget.o
+    0x20000974   0x00000048   Data   RW        21568    .data               BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_retarget.o
+    0x200009bc   0x00000004   PAD
+    0x200009c0   0x00000018   Data   RW        21751    .data               BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_sleep_manager.o
+    0x200009d8   0x00000001   Data   RW        21943    .data               BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/TOOLCHAIN_ARM_STD/mbed_boot_arm_std.o
+    0x200009d9   0x00000003   PAD
+    0x200009dc   0x00000004   Data   RW        21962    .data               BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/mbed_boot.o
+    0x200009e0   0x00000004   Data   RW        21963    .data               BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/mbed_boot.o
+    0x200009e4   0x00000004   Data   RW        21978    .data               BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/mbed_rtos_rtx.o
+    0x200009e8   0x00000004   Data   RW        21992    .data               BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/mbed_rtx_handlers.o
+    0x200009ec   0x00000004   Data   RW        22011    .data               BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/mbed_rtx_idle.o
+    0x200009f0   0x00000001   Data   RW        22617    .data               BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/Source/os_systick.o
+    0x200009f1   0x00000003   PAD
+    0x200009f4   0x00000004   Data   RW        24488    .data               BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/device/system_stm32f1xx.o
+    0x200009f8   0x00000004   Data   RW        24555    .data               BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/serial_device.o
+    0x200009fc   0x00000008   Data   RW        24626    .data               BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/can_api.o
+    0x20000a04   0x00000008   Data   RW        24706    .data               BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/hal_tick_overrides.o
+    0x20000a0c   0x00000004   Data   RW        24799    .data               BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/mbed_overrides.o
+    0x20000a10   0x00000004   Data   RW        24896    .data               BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/serial_api.o
+    0x20000a14   0x0000000c   Data   RW        24978    .data               BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/us_ticker.o
+    0x20000a20   0x00000004   Data   RW        25200    .data               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(stdio_streams.o)
+    0x20000a24   0x00000004   Data   RW        25201    .data               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(stdio_streams.o)
+    0x20000a28   0x00000004   Data   RW        25202    .data               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(stdio_streams.o)
+    0x20000a2c   0x00000004   Data   RW        25619    .data               C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(streamlock.o)
+    0x20000a30   0x000000a4   Data   RW        22186    .data.os            BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/rtx_kernel.o
+    0x20000ad4   0x00000568   Zero   RW          330    .bss                BUILD/NUCLEO_F103RB/ARM/main.o
+    0x2000103c   0x00000054   Zero   RW          402    .bss                BUILD/NUCLEO_F103RB/ARM/mbed-os/cmsis/TARGET_CORTEX_M/mbed_fault_handler.o
+    0x20001090   0x00000030   Zero   RW         1293    .bss                BUILD/NUCLEO_F103RB/ARM/mbed-os/drivers/AnalogIn.o
+    0x200010c0   0x00000098   Zero   RW         2009    .bss                BUILD/NUCLEO_F103RB/ARM/mbed-os/drivers/SPI.o
+    0x20001158   0x00000040   Zero   RW        20826    .bss                BUILD/NUCLEO_F103RB/ARM/mbed-os/hal/mbed_us_ticker_api.o
+    0x20001198   0x00000030   Zero   RW        21022    .bss                BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/FileBase.o
+    0x200011c8   0x00000068   Zero   RW        21340    .bss                BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_error.o
+    0x20001230   0x00000188   Zero   RW        21564    .bss                BUILD/NUCLEO_F103RB/ARM/mbed-os/platform/mbed_retarget.o
+    0x200013b8   0x00000100   Zero   RW        21941    .bss                BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/TOOLCHAIN_ARM_STD/mbed_boot_arm_std.o
+    0x200014b8   0x00001098   Zero   RW        21977    .bss                BUILD/NUCLEO_F103RB/ARM/mbed-os/rtos/TARGET_CORTEX/mbed_rtos_rtx.o
+    0x20002550   0x000000cc   Zero   RW        24554    .bss                BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/TARGET_STM32F1/serial_device.o
+    0x2000261c   0x0000004c   Zero   RW        24895    .bss                BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/serial_api.o
+    0x20002668   0x00000040   Zero   RW        24976    .bss                BUILD/NUCLEO_F103RB/ARM/mbed-os/targets/TARGET_STM/us_ticker.o
+    0x200026a8   0x00000054   Zero   RW        25197    .bss                C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(stdio_streams.o)
+    0x200026fc   0x00000054   Zero   RW        25198    .bss                C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(stdio_streams.o)
+    0x20002750   0x00000054   Zero   RW        25199    .bss                C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(stdio_streams.o)
+    0x200027a4   0x00000060   Zero   RW        25501    .bss                C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\c_w.l(libspace.o)
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+     34970       5062      25872       2516       7124      28004   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+        42          0         14         16          0          0   (incl. Padding)
+     11018        468        556         16        348       8096   Library Totals
+        20          0          5          0          0          0   (incl. Padding)
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+     45988       5530      26428       2532       7472      13996   Grand Totals
+     45988       5530      26428         52       7472      13996   ELF Image Totals (compressed)
+     45988       5530      26428         52          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                72416 (  70.72kB)
+    Total RW  Size (RW Data + ZI Data)             10004 (   9.77kB)
+    Total ROM Size (Code + RO Data + RW Data)      72468 (  70.77kB)
+
+==============================================================================
+

@@ -1,21 +1,18 @@
 #include "mbed.h"
 #include "lib_crc.h"
-#include "ble/BLE.h"
-#include "ble/Gap.h"
 #include "Watchdog.h"
 #include "events/EventQueue.h"
 
-#define DEBUG 0
+#define DEBUG 1
 
 static EventQueue ev_queue(15 * EVENTS_EVENT_SIZE);
 
-const static char     DEVICE_NAME[] = "MODBUS_SENSOR";
-static const uint16_t uuid16_list[] = {};
-
-AnalogIn sensor(p2);
-RawSerial rs(p12, p14, 9600);
-DigitalOut nrfLED(p20, 0);
-DigitalOut sendEn(p6, 0);
+AnalogIn sensor(PC_0);
+RawSerial rs(PB_10, PB_11, 9600);
+RawSerial pc(PA_2, PA_3, 9600);
+DigitalOut led0(PC_8, 0);
+DigitalOut sendEn(PB_15, 0);
+DigitalOut simEn(PB_7, 0);
 
 const uint8_t address = 0x01;
 
@@ -49,7 +46,7 @@ char c;
 bool newPacket = false, receiving = false, processingPacket = false, noError = true;
 
 void blink() {
-    nrfLED = !nrfLED;
+    led0 = !led0;
     wd.Service();
 }
 
@@ -83,13 +80,13 @@ void waitForPacket(){
         return;
     }
     if (DEBUG) {
-        rs.printf("New packet.\n");
+        pc.printf("New packet.\n");
     }
     ansPacketLen = 0;
     while(1){
         receiving = false;
         if (DEBUG) {
-            rs.printf("Still receving...\n");
+            pc.printf("Still receving...\n");
         }
         wait_ms(1);
         if(!receiving){
@@ -137,7 +134,7 @@ void readDO(){
             }
         }
         if (DEBUG) {
-            rs.printf("byte = %x\n", temp);
+            pc.printf("byte = %x\n", temp);
         }
         ans[3 + i] = temp;
         ansPacketLen++;
@@ -167,7 +164,7 @@ void readDI(){
             }
         }
         if (DEBUG) {
-            rs.printf("byte = %x\n", temp);
+            pc.printf("byte = %x\n", temp);
         }
         ans[3 + i] = temp;
         ansPacketLen++;
@@ -189,7 +186,7 @@ void readAO(){
         uint8_t tempH = (uint8_t)((AO[startAddress] & 0xFF00) >> 8);
         uint8_t tempL = (uint8_t)(AO[startAddress] & 0xFF);
         if (DEBUG) {
-            rs.printf("byte = %x - %x\n", tempH, tempL);
+            pc.printf("byte = %x - %x\n", tempH, tempL);
         }
         ans[3 + i] = tempH;
         ans[4 + i] = tempL;
@@ -213,7 +210,7 @@ void readAI(){
         uint8_t tempH = (uint8_t)((AI[startAddress] & 0xFF00) >> 8);
         uint8_t tempL = (uint8_t)(AI[startAddress] & 0xFF);
         if (DEBUG) {
-            rs.printf("byte = %x - %x\n", tempH, tempL);
+            pc.printf("byte = %x - %x\n", tempH, tempL);
         }
         ans[3 + i] = tempH;
         ans[4 + i] = tempL;
@@ -245,7 +242,7 @@ void writeSingleDO(){
         value = true;
     }
     if (DEBUG) {
-        rs.printf("Set output %d = %d\n", registerAddress, value);
+        pc.printf("Set output %d = %d\n", registerAddress, value);
     }
     DO[registerAddress] = value;
 }
@@ -266,7 +263,7 @@ void writeSingleAO(){
         ansPacketLen++;
     }
     if (DEBUG) {
-        rs.printf("Set register %x = %x\n", registerAddress, registerValue);
+        pc.printf("Set register %x = %x\n", registerAddress, registerValue);
     }
     AO[registerAddress] = registerValue;
 }
@@ -290,7 +287,7 @@ void writeMultiDO(){
             if((i * 8) + j < registerCount){
                 bool value = (temp & k) >> j;
                 if (DEBUG) {
-                    rs.printf("Set Output %d = %d\n", startAddress, value);
+                    pc.printf("Set Output %d = %d\n", startAddress, value);
                 }
                 DO[startAddress] = value;
                 startAddress++;
@@ -318,7 +315,7 @@ void writeMultiAO(){
         uint8_t tempL = buffer[8 + i];
         uint16_t temp = (tempH << 8) + tempL;
         if (DEBUG) {
-            rs.printf("Set register %x = %x\n", startAddress, temp);
+            pc.printf("Set register %x = %x\n", startAddress, temp);
         }
         AO[startAddress] = temp;
         startAddress++;
@@ -331,56 +328,56 @@ int processPacket(){
     switch(functionCode){
         case READ_DO:
             if (DEBUG) {
-                rs.printf("Read DO\n");
+                pc.printf("Read DO\n");
             }
             readDO();
             break;
 
         case READ_DI:
             if (DEBUG) {
-                rs.printf("Read DI\n");
+                pc.printf("Read DI\n");
             }
             readDI();
             break;
 
         case READ_AO:
             if (DEBUG) {
-                rs.printf("Read AO\n");
+                pc.printf("Read AO\n");
             }
             readAO();
             break;
 
         case READ_AI:
             if (DEBUG) {
-                rs.printf("Read AI\n");
+                pc.printf("Read AI\n");
             }
             readAI();
             break;
 
         case WRITE_SINGLE_DO:
             if (DEBUG) {
-                rs.printf("WRITE_SINGLE_DO\n");
+                pc.printf("WRITE_SINGLE_DO\n");
             }
             writeSingleDO();
             break;
 
         case WRITE_SINGLE_AO:
             if (DEBUG) {
-                rs.printf("WRITE_SINGLE_AO\n");
+                pc.printf("WRITE_SINGLE_AO\n");
             }
             writeSingleAO();
             break;
 
         case WRITE_MULTI_DO:
             if (DEBUG) {
-                rs.printf("WRITE_MULTI_DO\n");
+                pc.printf("WRITE_MULTI_DO\n");
             }
             writeMultiDO();
             break;
 
         case WRITE_MULTI_AO:
             if (DEBUG) {
-                rs.printf("WRITE_MULTI_AO\n");
+                pc.printf("WRITE_MULTI_AO\n");
             }
             writeMultiAO();
             break;
@@ -389,7 +386,7 @@ int processPacket(){
             noError = false;
             errorCode = FUNCTION_CODE_ERROR;
             if (DEBUG) {
-                rs.printf("Unknown funtion code!\n");
+                pc.printf("Unknown funtion code!\n");
             }
     }
     if(noError){
@@ -407,7 +404,7 @@ int processPacket(){
 void calculateAnsCRC(){
     uint16_t crc = calculate_crc16_Modbus((char *) ans, ansPacketLen);
     if (DEBUG) {
-        rs.printf("CRC = %x\n", crc);
+        pc.printf("CRC = %x\n", crc);
     }
     ans[ansPacketLen + 1] = (uint8_t)((crc & 0xFF00) >> 8);
     ans[ansPacketLen] = (uint8_t)(crc & 0xFF);
@@ -425,17 +422,18 @@ void processPacketAndRespond() {
     processingPacket = true;
     if (DEBUG) {
         for (size_t i = 0; i < packetLen; i++) {
-            rs.printf("%x ", buffer[i]);
+            pc.printf("%x ", buffer[i]);
         }
+        pc.printf("\n");
     }
     if(checkPacketCRC()){
         if (DEBUG) {
-            rs.printf("CRC done\n");
+            pc.printf("CRC done\n");
         }
     }
     else{
         if (DEBUG) {
-            rs.printf("CRC failed\n");
+            pc.printf("CRC failed\n");
         }
         processingPacket = false;
         return;
@@ -443,65 +441,32 @@ void processPacketAndRespond() {
 
     if(checkPacketAddress()){
         if (DEBUG) {
-            rs.printf("Packet is for me\n");
+            pc.printf("Packet is for me\n");
         }
         ans[0] = buffer[0];
         ansPacketLen++;
     }
     else {
         if (DEBUG) {
-            rs.printf("Packet is not for me\n");
+            pc.printf("Packet is not for me\n");
         }
         processingPacket = false;
         return;
     }
 
     if (DEBUG) {
-        rs.printf("Processing Packet\n");
+        pc.printf("Processing Packet\n");
     }
     processPacket();
     if (DEBUG) {
-        rs.printf("Calculate response CRC\n");
+        pc.printf("Calculate response CRC\n");
     }
     calculateAnsCRC();
     if (DEBUG) {
-        rs.printf("Sent response\n");
+        pc.printf("Sent response\n");
     }
     sendEn = 1;
     sendAnswer();
     sendEn = 0;
     processingPacket = false;
-}
-
-void disconnectionCallback(const Gap::DisconnectionCallbackParams_t *params){
-    (void) params;
-    BLE::Instance().gap().startAdvertising();
-}
-
-void connectionCallback(const Gap::ConnectionCallbackParams_t *params) {
-    BLE::Instance().gap().stopAdvertising();
-}
-
-void bleInitComplete(BLE::InitializationCompleteCallbackContext *params){
-    BLE&        ble   = params->ble;
-    // ble_error_t error = params->error;
-
-    /* Ensure that it is the default instance of BLE */
-    if(ble.getInstanceID() != BLE::DEFAULT_INSTANCE) {
-        return;
-    }
-    ble.gap().onDisconnection(disconnectionCallback);
-    ble.gap().onConnection(connectionCallback);
-    /* setup advertising */
-    ble.gap().accumulateAdvertisingPayload(GapAdvertisingData::BREDR_NOT_SUPPORTED | GapAdvertisingData::LE_GENERAL_DISCOVERABLE);
-    ble.gap().accumulateAdvertisingPayload(GapAdvertisingData::COMPLETE_LIST_16BIT_SERVICE_IDS, (uint8_t *)uuid16_list, sizeof(uuid16_list));
-    ble.gap().accumulateAdvertisingPayload(GapAdvertisingData::COMPLETE_LOCAL_NAME, (uint8_t *)DEVICE_NAME, sizeof(DEVICE_NAME));
-    ble.gap().setAdvertisingType(GapAdvertisingParams::ADV_CONNECTABLE_UNDIRECTED);
-    ble.gap().setAdvertisingInterval(1000); /* 1s. */
-    ble.gap().startAdvertising();
-}
-
-void scheduleBleEventsProcessing(BLE::OnEventsToProcessCallbackContext* context) {
-    BLE &ble = BLE::Instance();
-    ev_queue.call(Callback<void()>(&ble, &BLE::processEvents));
 }
